@@ -244,7 +244,7 @@ The specific requirements of any framework project are listed below.
 
 Carthage will only build Xcode schemes that are shared from your `.xcodeproj`. You can see if all of your intended schemes build successfully by running `carthage build --no-skip-current`, then checking the [Carthage/Build][] folder.
 
-If an important scheme is not built when you run that command, open Xcode and make sure that the [scheme is marked as _Shared_](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/ConfigureBots.html#//apple_ref/doc/uid/TP40013292-CH9-SW3), so Carthage can discover it.
+If an important scheme is not built when you run that command, open Xcode and make sure that the [scheme is marked as _Shared_](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/ConfigureBots.html#//apple_ref/doc/uid/TP40013292-CH9-SW3), so Carthage can discover it.  If the scheme is still not built and Xcode shows that it is shared, make sure the `.xscheme` file for your scheme actually exists (usually in the `xcshareddata` directory of your `.xcodeproj`).  You can recreate this file by toggling the shared button in Xcode.
 
 
 ### Resolve build failures
